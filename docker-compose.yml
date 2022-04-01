@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  backend:
+    build: .
+    command: bash -c "python manage.py migrate && python manage.py createsuperuser --noinput || true && python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/backend
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mysql
+    restart: always
+    env_file:
+      - .env
+  mysql:
+    image: mysql
+    restart: always
+    volumes:
+      - db-volume:/var/lib/mysql
+    env_file:
+      - .env
+
+volumes:
+  db-volume:
