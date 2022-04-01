@@ -11,11 +11,11 @@ def index(request):
     context = {
         "place_list": Place.objects.all(),
         "location_dict": {},
-        "mapbox_token": settings.MAPBOX_TOKEN
+        "mapbox_token": settings.MAPBOX_KEY
     }
     for place in Place.objects.all():
         context["location_dict"][place.name] = {
-            "center": [place.longitude, place.latitude],
+            "center": place.location,
             "zoom": 15,
             "bearing": 35,
             "pitch": 40,

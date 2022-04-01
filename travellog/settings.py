@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'mapbox_location_field',
 ]
 
 MIDDLEWARE = [
@@ -132,4 +133,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'tmp')
 
-MAPBOX_TOKEN = os.environ.get("MAPBOX_TOKEN", "")
+MAPBOX_KEY = os.environ.get("MAPBOX_TOKEN", "")
