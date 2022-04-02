@@ -112,9 +112,6 @@
         </p>
       </div>
 
-      {% load static %}
-      <img src="{% static 'map/example.jpg' %}" alt="My image">
-
     </div> <!-- end writing -->
 
   </div> <!-- end container -->
@@ -136,8 +133,9 @@
       zoom: 15,
       bearing: 35,
       pitch: 40,
-      duration: 8000
+      duration: 8000,
     });
+    map.addControl(new mapboxgl.FullscreenControl());
 
     map.scrollZoom.disable();
 

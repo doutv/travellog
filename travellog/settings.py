@@ -114,7 +114,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = os.environ.get('TIME_ZONE', 'Asia/Shanghai')
 
 USE_I18N = True
 
@@ -141,37 +141,13 @@ CUSTOM_STORAGE_OPTIONS = {
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
-    'formatters': {
-        'verbose': {
-            'format': '{asctime} {module}.{funcName} {lineno:3} {levelname:7} => {message}',
-            'style': '{',
-        },
-    },
     'handlers': {
         'console': {
             'class': 'logging.StreamHandler',
-            'formatter': 'verbose',
-        },
-        'file': {
-            'class': 'logging.handlers.TimedRotatingFileHandler',
-            'level': 'INFO',
-            'formatter': 'verbose',
-            'filename': os.path.join(
-                BASE_DIR,
-                'logs',
-                'travellog.log'),
-            'interval': 1,
-            'when': 'midnight',
-            'backupCount': 100,
         },
     },
-    'loggers': {
-        'django': {
-            'handlers': [
-                'console',
-                'file'],
-            'level': 'INFO',
-            'propagate': True,
-        },
+    'root': {
+        'handlers': ['console'],
+        'level': 'INFO',
     },
 }
