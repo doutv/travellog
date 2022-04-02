@@ -131,8 +131,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'tmp')
-
 MAPBOX_KEY = os.environ.get("MAPBOX_TOKEN", "")
 
 CUSTOM_STORAGE_OPTIONS = {
@@ -143,13 +141,37 @@ CUSTOM_STORAGE_OPTIONS = {
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{asctime} {module}.{funcName} {lineno:3} {levelname:7} => {message}',
+            'style': '{',
+        },
+    },
     'handlers': {
         'console': {
             'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
+        },
+        'file': {
+            'class': 'logging.handlers.TimedRotatingFileHandler',
+            'level': 'INFO',
+            'formatter': 'verbose',
+            'filename': os.path.join(
+                BASE_DIR,
+                'logs',
+                'travellog.log'),
+            'interval': 1,
+            'when': 'midnight',
+            'backupCount': 100,
         },
     },
-    'root': {
-        'handlers': ['console'],
-        'level': 'WARNING',
+    'loggers': {
+        'django': {
+            'handlers': [
+                'console',
+                'file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
     },
 }

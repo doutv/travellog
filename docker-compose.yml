@@ -9,17 +9,22 @@ services:
     ports:
       - "8000:8000"
     depends_on:
-      - mysql
+      mysql:
+        condition: service_healthy
     restart: always
     env_file:
-      - .env
+      - deploy.env
   mysql:
     image: mysql
     restart: always
     volumes:
       - db-volume:/var/lib/mysql
     env_file:
-      - .env
+      - deploy.env
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+      timeout: 20s
+      retries: 10
 
 volumes:
   db-volume:

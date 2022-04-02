@@ -23,7 +23,6 @@ class SmmsStorage(Storage):
         headers = {'Authorization': self.option["token"]}
         upload_url = self.option["base_url"] + '/upload'
         resp = requests.post(upload_url, files=files, headers=headers)
-        resp.raise_for_status()
         if resp.status_code != requests.codes.ok:
             logger.error(
                 f"Image Upload Failed: {resp.status_code}-{resp.content}")

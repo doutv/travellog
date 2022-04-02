@@ -2,3 +2,4 @@ django==4.0.3
 mysqlclient==2.1.0
 django-mapbox-location-field==2.0.0
 pillow==9.1.0
+requests==2.25.1
