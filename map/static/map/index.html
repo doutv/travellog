@@ -45,8 +45,8 @@
 
   <!-- Mapbox GL styles -->
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.js'></script>
-  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.css' rel='stylesheet' />
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' />
 
   <script src="{% static 'map/js/vendor/modernizer.js' %}"></script>
 
@@ -135,9 +135,14 @@
       pitch: 40,
       duration: 8000,
     });
+    map.dragRotate.disable();
+    map.touchZoomRotate.disableRotation();
     map.addControl(new mapboxgl.FullscreenControl());
+    map.addControl(new mapboxgl.NavigationControl());
 
-    map.scrollZoom.disable();
+    const marker = new mapboxgl.Marker({
+      draggable: true
+    }).setLngLat([114.20787, 22.69106]).addTo(map);
 
     // Every time the page scrolls, we'll check which section is on the screen
     $('#writing').scroll(function () {
