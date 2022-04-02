@@ -73,7 +73,7 @@
       <!-- this is an optional navigation -->
       <section class="navigation">
         <a class="toggle"></a>
-        <div class="menu">
+        <div class="menu"> -->
           <!-- Add a link like this for each state or country section you plan to add -->
           <!-- <a href="#pa" title="Skip to Pennsylvania" class="pa nav-icon"><i class="mg map-us-pa"></i></a> -->
         </div>
@@ -89,7 +89,7 @@
         <div class="grid">
           {% for image in place.image_set.all %}
           <div class="box box--{{image.layout}}">
-            <div class="image-wrapper" style="background-image: url({{image.url}})"></div>
+            <div class="image-wrapper" style="background-image: url({{image.photo.url}})"></div>
           </div>
           {% endfor %}
         </div>
@@ -132,8 +132,8 @@
     var map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/outdoors-v9',
-      center: [-75.401710, 41.221494], // your starting coordiantes
-      zoom: 12.5,
+      center: [114.20787, 22.69106], // your starting coordiantes
+      zoom: 15,
       bearing: 35,
       pitch: 40,
       duration: 8000

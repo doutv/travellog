@@ -33,7 +33,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'map.apps.MapConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mapbox_location_field',
+    'map.apps.MapConfig',
 ]
 
 MIDDLEWARE = [
@@ -134,3 +134,22 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_ROOT = os.path.join(BASE_DIR, 'tmp')
 
 MAPBOX_KEY = os.environ.get("MAPBOX_TOKEN", "")
+
+CUSTOM_STORAGE_OPTIONS = {
+    "base_url": "https://sm.ms/api/v2",
+    "token": os.environ.get("SMMS_TOKEN", "")
+}
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'WARNING',
+    },
+}
