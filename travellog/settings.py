@@ -151,3 +151,5 @@ LOGGING = {
         'level': 'INFO',
     },
 }
+
+DEFAULT_FILE_STORAGE = 'qiniustorage.backends.QiniuStorage'
