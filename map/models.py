@@ -8,7 +8,7 @@ from .storage import SmmsStorage
 
 
 class Place(models.Model):
-    name = models.CharField(primary_key=True, max_length=50)
+    name = models.CharField(max_length=50)
     location = LocationField()
     notes = models.TextField(blank=True)
     date = models.DateField(default=timezone.now)
