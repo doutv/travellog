@@ -8,7 +8,7 @@ class Command(BaseCommand):
     help = 'Generate Static index.html for deploying'
 
     def handle(self, *args, **options):
-        filepath = os.path.join(settings.BASE_DIR, "index.html")
+        filepath = os.path.join(settings.BASE_DIR, ".deploy", "index.html")
         content = _render_index()
         with open(filepath, 'w') as f:
             f.write(content)
