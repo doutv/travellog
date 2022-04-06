@@ -17,8 +17,6 @@ def index(request):
         context["location_dict"][place.name] = {
             "center": place.location,
             "zoom": 15,
-            "bearing": 35,
-            "pitch": 40,
             "duration": 8000,
         }
     return HttpResponse(template.render(context, request))

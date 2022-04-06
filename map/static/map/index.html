@@ -8,8 +8,8 @@
   <meta charset="utf-8">
 
   <title>Travel Log</title>
-  <meta name="description" content="An interactive map of everywhere I traveled this year.">
-  <meta name="author" content="Lauren Hallden">
+  <meta name="description" content="An interactive map of everywhere I traveled.">
+  <meta name="author" content="Jason">
 
   <link rel="apple-touch-icon" sizes="57x57" href="{% static 'map/images/icons/apple-icon-57x57.png' %}">
   <link rel="apple-touch-icon" sizes="60x60" href="{% static 'map/images/icons/apple-icon-60x60.png' %}">
@@ -129,20 +129,9 @@
     var map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/outdoors-v9',
-      center: [114.20787, 22.69106], // your starting coordiantes
-      zoom: 15,
-      bearing: 35,
-      pitch: 40,
-      duration: 8000,
     });
-    map.dragRotate.disable();
-    map.touchZoomRotate.disableRotation();
     map.addControl(new mapboxgl.FullscreenControl());
     map.addControl(new mapboxgl.NavigationControl());
-
-    const marker = new mapboxgl.Marker({
-      draggable: true
-    }).setLngLat([114.20787, 22.69106]).addTo(map);
 
     // Every time the page scrolls, we'll check which section is on the screen
     $('#writing').scroll(function () {
@@ -154,7 +143,6 @@
         var windowHeight = $(window).height();
         var theId = $(this).attr('id');
         if ($(window).width() > 767) {
-          // console.log(theId);
           if (offset.top < 200 && bottom > 200) {
             setActiveChapter(theId);
           }
@@ -175,6 +163,9 @@
       $('#' + theId).addClass('active');
       if (theId === activeChapterName) return;
       map.flyTo(chapters[theId]);
+      new mapboxgl.Marker({
+        draggable: true
+      }).setLngLat(chapters[theId].center).addTo(map);
       activeChapterName = theId;
     };
 
