@@ -3,7 +3,6 @@ from mapbox_location_field.models import LocationField
 from django.conf import settings
 import django.utils.timezone as timezone
 from django.utils.safestring import mark_safe
-from .storage import SmmsStorage
 # Create your models here.
 
 
