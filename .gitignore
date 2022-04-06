@@ -4,7 +4,6 @@
 logs/
 .qiniu_pythonsdk_hostscache.json
 sjq-docker-compose.yml
-index.html
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
