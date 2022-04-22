@@ -4,6 +4,7 @@ source deploy.env
 set +a
 docker-compose exec backend bash -c "python3 manage.py generate" &&\
 mkdir -p .deploy &&\
+cp -r photos ./.deploy/ &&\
 cd .deploy &&\
 git init &&\
 sudo git add -A &&\

@@ -4,6 +4,7 @@ source deploy.env
 set +a
 python3 manage.py generate &&\
 mkdir -p .deploy &&\
+cp -r photos ./.deploy/ &&\
 cd .deploy &&\
 git init &&\
 git add -A &&\

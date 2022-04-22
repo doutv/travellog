@@ -16,7 +16,6 @@ from django.core.management.utils import get_random_secret_key
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-IMAGE_PATH = os.path.join(BASE_DIR, "images")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -152,4 +151,6 @@ LOGGING = {
     },
 }
 
-DEFAULT_FILE_STORAGE = 'qiniustorage.backends.QiniuStorage'
+# DEFAULT_FILE_STORAGE = 'qiniustorage.backends.QiniuStorage'
+MEDIA_ROOT = os.path.join(BASE_DIR, "photos")
+MEDIA_URL = 'photos/'

@@ -25,7 +25,7 @@ class Image(models.Model):
         ("3x2", "3x2"),
         ("3x3", "3x3"),
     )
-    photo = models.ImageField()
+    photo = models.ImageField(upload_to='test')
     layout = models.CharField(
         max_length=10, choices=IMAGE_LAYOUTS, default="1x1")
     place = models.ForeignKey(Place, on_delete=models.SET_NULL, null=True)
