@@ -1,4 +1,4 @@
-django==3.2.12
+django==3.2.13
 mysqlclient==2.1.0
 django-mapbox-location-field==2.0.0
 pillow==9.1.0
