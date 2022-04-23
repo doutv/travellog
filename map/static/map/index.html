@@ -87,9 +87,9 @@
         <span class="date">{{place.date}}</span>
 
         <div class="grid">
-          {% for image in place.image_set.all %}
-          <div class="box box--{{image.layout}}">
-            <div class="image-wrapper" style="background-image: url({{image.photo.url}})"></div>
+          {% for photo_url in place.photos %}
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url({{photo_url}})"></div>
           </div>
           {% endfor %}
         </div>
