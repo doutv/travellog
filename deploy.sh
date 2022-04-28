@@ -5,7 +5,6 @@ set +a
 export MYSQL_HOST=127.0.0.1
 python3 manage.py generate &&\
 mkdir -p .deploy &&\
-cp -r photos ./.deploy/ &&\
 cd .deploy &&\
 git init &&\
 git add -A &&\
