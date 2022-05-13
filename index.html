@@ -1,0 +1,566 @@
+<!doctype html>
+
+<html lang="en">
+
+
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Travel Log</title>
+  <meta name="description" content="An interactive map of everywhere I traveled.">
+  <meta name="author" content="Jason">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/static/map/images/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/static/map/images/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/static/map/images/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/static/map/images/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/static/map/images/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/static/map/images/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/static/map/images/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/static/map/images/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/map/images/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/static/map/images/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/map/images/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/static/map/images/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/map/images/icons/favicon-16x16.png">
+  <link rel="manifest" href="/static/map/images/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Metatags -->
+  <!-- <meta property="og:title" content="Travel Log" />
+  <meta property="og:url" content="your_url_here" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="An interactive map of everywhere I traveled this year." />
+  <meta property="og:image" content="images/travellog.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Travel Log" />
+  <meta name="tiwtter:creator" content="@your_twitter_handle" />
+  <meta name="twitter:description" content="An interactive map of everywhere I traveled this year." />
+  <meta name="twitter:url" content="your_url_here" />
+  <meta property="og:image" content="images/travellog.jpg" /> -->
+
+  <!-- Mapbox GL styles -->
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' />
+
+  <script src="/static/map/js/vendor/modernizer.js"></script>
+
+  <!-- All our css -->
+  <link href="/static/map/stylesheets/mapglyphs.css" rel="stylesheet">
+  <link href="/static/map/stylesheets/screen.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div id="map">
+      <!-- this is where our map will go -->
+    </div> <!-- end map -->
+
+    <div id="writing">
+      <!-- and this is where all the writing and pictures go -->
+
+      <!-- this is an optional navigation -->
+      <section class="navigation">
+        <a class="toggle"></a>
+        <div class="menu"> -->
+          <!-- Add a link like this for each state or country section you plan to add -->
+          <!-- <a href="#pa" title="Skip to Pennsylvania" class="pa nav-icon"><i class="mg map-us-pa"></i></a> -->
+        </div>
+      </section>
+
+
+      
+      <section id=才村码头>
+        <h3>才村码头</h3>
+        <p>才村码头看日出</p>
+        <span class="date">Jan. 5, 2021</span>
+
+        <div class="grid">
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村码头/IMG_20210105_080858.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村码头/IMG_20210106_073932.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村码头/IMG_20210105_075918.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村码头/IMG_20210105_080553.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村码头/IMG_20210106_080816.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村码头/IMG_20210105_075949.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村码头/IMG_20210105_075252.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村码头/IMG_20210108_080513.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村码头/IMG_20210105_075729.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村码头/IMG_20210106_080448.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村码头/IMG_20210105_081036.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村码头/IMG_20210108_074650.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村码头/IMG_20210105_075617.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村码头/IMG_20210106_073936.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村码头/IMG_20210105_081214.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村码头/IMG_20210106_074004.jpg)"></div>
+          </div>
+          
+        </div>
+      </section>
+      
+      <section id=才村-龙龛>
+        <h3>才村-龙龛</h3>
+        <p>边骑车边看洱海风景，在龙龛看日出</p>
+        <span class="date">Jan. 6, 2021</span>
+
+        <div class="grid">
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村-龙龛/IMG_20210106_110138.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村-龙龛/IMG_20210107_080238.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村-龙龛/IMG_20210107_080705.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村-龙龛/IMG_20210107_082309.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村-龙龛/IMG_20210107_080458.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村-龙龛/IMG_20210106_101436.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村-龙龛/IMG_20210106_103234.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村-龙龛/IMG_20210106_095811.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村-龙龛/IMG_20210107_073237.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村-龙龛/IMG_20210107_080750.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村-龙龛/IMG_20210107_074146.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村-龙龛/IMG_20210107_080616.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村-龙龛/IMG_20210107_081435.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村-龙龛/IMG_20210106_095259.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村-龙龛/IMG_20210106_184638.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村-龙龛/IMG_20210106_095416.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村-龙龛/IMG_20210106_103810.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村-龙龛/IMG_20210106_104827.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村-龙龛/IMG_20210107_082447.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村-龙龛/IMG_20210107_073817.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/才村-龙龛/IMG_20210106_095633.jpg)"></div>
+          </div>
+          
+        </div>
+      </section>
+      
+      <section id=洱海游船>
+        <h3>洱海游船</h3>
+        <p>全程3h洱海游船：白族歌舞表演+南诏风情岛，超值体验</p>
+        <span class="date">Jan. 7, 2021</span>
+
+        <div class="grid">
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/洱海游船/IMG_20210107_152548.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/洱海游船/IMG_20210107_142804.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/洱海游船/IMG_20210107_151532.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/洱海游船/IMG_20210107_143017.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/洱海游船/IMG_20210107_152646.jpg)"></div>
+          </div>
+          
+        </div>
+      </section>
+      
+      <section id=天龙八部影视城>
+        <h3>天龙八部影视城</h3>
+        <p>人少适合拍照，融合了不少金庸小说的元素</p>
+        <span class="date">Jan. 5, 2021</span>
+
+        <div class="grid">
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/天龙八部影视城/IMG_20210105_103519.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/天龙八部影视城/IMG_20210105_101433.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/天龙八部影视城/IMG_20210105_103555.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/天龙八部影视城/IMG_20210105_102206.jpg)"></div>
+          </div>
+          
+        </div>
+      </section>
+      
+      <section id=寂照庵>
+        <h3>寂照庵</h3>
+        <p>环境幽静且精致的庙宇，里面有不少供游人坐下参禅（发呆）的地方，十分推荐</p>
+        <span class="date">Jan. 5, 2021</span>
+
+        <div class="grid">
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/寂照庵/IMG_20210105_155120.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/寂照庵/IMG_20210105_162356.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/寂照庵/IMG_20210105_155153.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/寂照庵/IMG_20210105_150644.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/寂照庵/IMG_20210105_170816.jpg)"></div>
+          </div>
+          
+        </div>
+      </section>
+      
+      <section id=黄山>
+        <h3>黄山</h3>
+        <p>“黄山归来不看山”，这是我第一次看到黄山雪景，在下雪后的第三天登山，感受了雪淞和日出之美。</p>
+        <span class="date">Dec. 28, 2021</span>
+
+        <div class="grid">
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/黄山/IMG_20211229_071429.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/黄山/IMG_20211228_104907.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/黄山/IMG_20211228_172522.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/黄山/IMG_20211229_073317.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/黄山/IMG_20211229_071648.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/黄山/IMG_20211228_110807.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/黄山/IMG_20211229_073732.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/黄山/IMG_20211228_103714.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/黄山/IMG_20211228_103116.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/黄山/IMG_20211229_073235.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/黄山/IMG_20211229_091314.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/黄山/IMG_20211229_070732.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/黄山/IMG_20211229_131620.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/黄山/IMG_20211228_165942.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/黄山/IMG_20211228_170942.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/黄山/IMG_20211229_092052.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/黄山/IMG_20211228_163633.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/黄山/IMG_20211228_170650.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/黄山/IMG_20211228_111610.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/黄山/IMG_20211229_125953.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/黄山/IMG_20211229_131149.jpg)"></div>
+          </div>
+          
+        </div>
+      </section>
+      
+      <section id=宏村>
+        <h3>宏村</h3>
+        <p>21年的圣诞假期，宏村的游客很少，而当天天气极好，万里无云</p>
+        <span class="date">Dec. 27, 2021</span>
+
+        <div class="grid">
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/宏村/IMG_20211227_094057.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/宏村/IMG_20211227_111133.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/宏村/IMG_20211227_094712.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/宏村/IMG_20211227_093840.jpg)"></div>
+          </div>
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/宏村/IMG_20211227_093144.jpg)"></div>
+          </div>
+          
+        </div>
+      </section>
+      
+      <section id=武汉>
+        <h3>武汉</h3>
+        <p>吃碳水，见同学，游东湖</p>
+        <span class="date">Dec. 30, 2021</span>
+
+        <div class="grid">
+          
+          <div class="box box--1x1">
+            <div class="image-wrapper" style="background-image: url(photos/武汉/IMG_20211230_190950.jpg)"></div>
+          </div>
+          
+        </div>
+      </section>
+      
+
+      <!-- <section id="intro" class='active'>
+        <h1>My Travel Log: 2018</h1>
+        <p>Say a little something about why you were traveling!</p>
+      </section> -->
+
+      <!-- This is the end! -->
+      <div class="section end">
+        <h4 class="h2">The end</h4>
+        <p>Travel Log designed by <a href="https:/huangyongjin.com" title="Jason">Jason</a>
+        </p>
+        </p>
+        <p>Want to make one of these?<br />
+          <a title="Travel Log GitHub Repo" href="https://github.com/doutv/travellog">Grab the code</a>
+        </p>
+      </div>
+
+    </div> <!-- end writing -->
+
+  </div> <!-- end container -->
+
+  <!-- JS -->
+  <script src="/static/map/js/vendor/jquery.js"></script>
+
+  <script id="location_dict" type="application/json">{"\u624d\u6751\u7801\u5934": {"center": [100.192036, 25.721332], "zoom": 15, "duration": 8000}, "\u624d\u6751-\u9f99\u9f9b": {"center": [100.20623153942734, 25.6951580098073], "zoom": 15, "duration": 8000}, "\u6d31\u6d77\u6e38\u8239": {"center": [100.181128, 25.783081], "zoom": 15, "duration": 8000}, "\u5929\u9f99\u516b\u90e8\u5f71\u89c6\u57ce": {"center": [100.147833, 25.684809], "zoom": 15, "duration": 8000}, "\u5bc2\u7167\u5eb5": {"center": [100.16375910912171, 25.64495814024521], "zoom": 15, "duration": 8000}, "\u9ec4\u5c71": {"center": [118.1677231870973, 30.14164767989402], "zoom": 15, "duration": 8000}, "\u5b8f\u6751": {"center": [117.98417835936095, 30.002891038441504], "zoom": 15, "duration": 8000}, "\u6b66\u6c49": {"center": [114.40576432771553, 30.556316127838826], "zoom": 15, "duration": 8000}}</script>
+  <script id="mapbox_token" type="application/json">"pk.eyJ1IjoibGF1cmVuaGFsbGRlbiIsImEiOiJjamkxcDd0aWcxbDM1M3ZuMHY4bXZmY2V1In0.SMfvr-ZXQTzLUaFgnguyvw"</script>
+  <!-- Here's where we give the map all of its settings and locations -->
+  <script>
+    mapboxgl.accessToken = JSON.parse(document.getElementById('mapbox_token').textContent);
+    const chapters = JSON.parse(document.getElementById('location_dict').textContent);
+
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/outdoors-v9',
+    });
+    map.addControl(new mapboxgl.FullscreenControl());
+    map.addControl(new mapboxgl.NavigationControl());
+
+    // Every time the page scrolls, we'll check which section is on the screen
+    $('#writing').scroll(function () {
+      var arrPlaces = $("section");
+
+      arrPlaces.each(function () {
+        var offset = $(this).offset();
+        var bottom = offset.top + $(this).outerHeight();
+        var windowHeight = $(window).height();
+        var theId = $(this).attr('id');
+        if ($(window).width() > 767) {
+          if (offset.top < 200 && bottom > 200) {
+            setActiveChapter(theId);
+          }
+        }
+        else if (offset.top < windowHeight) {
+          // this is for mobile; we trigger the map move as soon as a section enters the screen
+          setActiveChapter(theId);
+        }
+        else {
+          $(this).removeClass('active');
+        }
+      });
+    });
+
+    var activeChapterName = 'intro';
+
+    function setActiveChapter(theId) {
+      $('#' + theId).addClass('active');
+      if (theId === activeChapterName) return;
+      map.flyTo(chapters[theId]);
+      new mapboxgl.Marker({
+        draggable: true
+      }).setLngLat(chapters[theId].center).addTo(map);
+      activeChapterName = theId;
+    };
+
+    // Open and close the optional navigation
+
+    $('.toggle').click(function () {
+      $(this).toggleClass('open');
+      $('.menu').toggleClass('open');
+    });
+
+    $('.menu .nav-icon').click(function () {
+      $('.toggle').removeClass('open');
+      $('.menu').removeClass('open');
+    });
+
+  </script>
+
+</body>
+
+</html>
