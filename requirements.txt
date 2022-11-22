@@ -1,6 +1,6 @@
 django==3.2.13
 mysqlclient==2.1.0
 django-mapbox-location-field==2.0.0
-pillow==9.1.0
+pillow==9.3.0
 requests==2.25.1
 django-qiniu-storage==2.3.1
